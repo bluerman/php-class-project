@@ -1,5 +1,5 @@
 <?php
-require 'TodoList.php';
+namespace Todo;
 
 class TodoRepository
 {
@@ -7,7 +7,7 @@ class TodoRepository
 
     public function __construct()
     {
-        $this->dbConnection = new mysqli('localhost', 'dbuser', 'dbpass', 'todos_dev');
+        $this->dbConnection = new \mysqli('localhost', 'dbuser', 'dbpass', 'todos_dev');
     }
 
     public function getTodoList()
